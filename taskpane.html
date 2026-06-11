@@ -734,7 +734,10 @@ Output ONLY the email text. Start with "Subject:" then a blank line, then the bo
   }
 
   // Settings tab click
-  document.getElementById('tab-4').addEventListener('click', () => goToPane(4));
+  //document.getElementById('tab-4').addEventListener('click', () => goToPane(4));
+  document.querySelectorAll('.step-tab').forEach((tab, i) => {
+  tab.addEventListener('click', () => goToPane(i + 1));
+});
 </script>
 </body>
 </html>
